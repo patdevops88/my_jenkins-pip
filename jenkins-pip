@@ -1,32 +1,22 @@
 pipeline {
     agent any
-
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                echo 'build sucessful'
+                // Define build steps here
+                sh 'echo "Building the project"'
             }
         }
-    }
-}
-pipeline {
-    agent any
-
-    stages {
-        stage('test') {
+        stage('Test') {
             steps {
-                echo 'test successful'
+                // Define test steps here
+                sh 'echo "Running tests"'
             }
         }
-    }
-}
-pipeline {
-    agent any
-
-    stages {
-        stage('deploy') {
+        stage('Deploy') {
             steps {
-                echo 'deploy successful'
+                // Define deployment steps here
+                sh 'echo "Deploying the application"'
             }
         }
     }
